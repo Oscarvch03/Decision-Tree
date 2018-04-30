@@ -1,0 +1,20 @@
+Matemáticas Aplicadas Y Ciencias de la Computación / MACC
+Primera Entrega Proyecto de Programación 2018-I
+
+Presentado por:                                Presentado a:
+Ángela Natalia Oviedo Ortega                             José Julián Jiménez Rincón 
+Juan Camilo Rodríguez Jiménez
+Oscar Velasco Chiquillo
+
+Nota: Proyecto Propuesto por el Doctor En Lógica Edgar José Andrade Lotero
+
+Lenguaje de Programación de Desarrollo del Proyecto: Python
+
+Descripción del Problema: Modelación de métodos de clasificación o discriminación de objetos.
+
+Objetivo General: Generar la implementación de árboles de discriminación de objetos en Python, como una de las posibles soluciones al problema ya mencionado.
+
+Solución del Problema: Bajo la implementación de los árboles de discriminación, lograr la clasificación de objetos teniendo en cuenta características básicas de los mismos.
+
+Funcionalidad Básica: La creación de este proyecto implica un programa que bajo el reconocimiento de los ámbitos característicos, sintácticos, semánticos, físicos, etcétera…, 
+		      facilite  la clasificación de los objetos dentro del marco de los árboles de discriminación. 

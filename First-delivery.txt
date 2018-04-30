@@ -1,0 +1,16 @@
+29/04/2018
+
+Esta semana se trabajó en la investigación sobre el tema de “Arboles binarios”, su estructura y formas de desarrollar el código para generar y manipular uno, 
+además de también plantear como es que el árbol se va a desenvolver.
+
+Llegamos a la conclusión de que la estructura del árbol se va a trabajar con un sistema de rótulos, es decir, se va a implementar en un rango entre 0 y 1, 
+y se va a clasificar el objeto dependiendo de la posición donde este sea puesto.
+
+Esto llevo al desarrollo del código donde definimos los posibles intervalos de cada rotulo y creando nodos donde estos están ubicados, además de implementar 
+la clasificación con base a lo investigado sobre “Arboles binarios”.
+
+Lo que ahora toca desarrollar es un método donde el sistema pueda comparar objetos y los logre marcar con su rotulo correspondiente y formar el árbol, además 
+de tener que investigar cada vez más sobre la manipulación de los árboles y la estructura del código.
+
+Se planea poder desarrollar el código para que este pueda ya recibir un objeto y lo logre clasificar, para después poderlo adaptar para que se pueda ingresar 
+varios objetos y los clasifique a todos dándoles un rotulo y nodo únicos.
