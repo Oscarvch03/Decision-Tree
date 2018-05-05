@@ -1,0 +1,11 @@
+05/05/2018
+
+Esta semana se investigó más a fondo sobre la funcionalidad y estructura de los Árboles Binarios, además se trabajó en base a la tarea propuesta por el Doctor 
+en Lógica Edgar José Andrade Lotero en la cual se creó la definición de objetos nodos, se definieron cuatro ejemplos de árboles binarios y se intentó crear una 
+función donde en un árbol se ingrese un número X en un intervalo entre 0 y 1, se devuelva un rótulo (key) de el árbol que contenga a X (se sigue trabajando en ello).
+
+El reto ahora es ver cómo implementar los métodos que se desarrollaron para que los anteriores se puedan ejecutar en los cuatro ejemplos propuestos los cuales fueron: 
+animales, árbol genealógico, conjuntos bien ordenados y el abecedario.
+
+Se propone investigar más acerca de funciones recursivas pues el profesor propuso usar este método para la implementación de los métodos, aunque no se ha podido 
+desarrollar mucho esta idea pues es un método muy complejo y confuso, pero se espera poder implementarlo en el proyecto próximamente.
