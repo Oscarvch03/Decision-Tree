@@ -1,0 +1,31 @@
+12/05/2018
+
+Esta semana se trabajó en la implementación de las funciones crear_objetos, crear_contexto, 
+juego_discriminacion, insertar y rondas_100. 
+
+crear_objetos: Esta consiste en crear una lista de objetos random dentro del intervalo 0 y 1    
+usando una lista vacía y llenadola de número random entre 0 y 1. 
+
+crear_contexto: Esta consiste en seleccionar 5 objetos random basados en la función crear_objetos.
+
+Juego_discriminacion: En esta se analiza si cada objeto tiene un rótulo único, en caso de que esto 
+se cumpla la función retorna True, pero en caso de que al menos 2 objetos tengan el mismo rótulo 
+la función retorna False.
+
+rondas_100: En teoría esta consiste en ejecutar la función juego_discriminacion 100 veces, para 
+evaluar cuántas veces se logra que un rótulo contenga un único objeto  (True) , y cuántas veces 
+no se logra (False). Ya que no se ha logrado su óptimo funcionamiento.
+
+insertar: En teoría esta consiste en tomar un objeto y otorgarle un único rótulo, con el fin de 
+clasificarlo en el árbol binario, se intentó implementar, pero hay algunos ámbitos de la función .
+
+Nota 1	 : Se importó la librería  “ random “.
+Además se implementaron nuevos nodos, para lograr una clasificación más específica de los objetos. 
+
+Nota 2 : Respecto al segundo avance se considera que los ejemplos propuestos de árboles binarios 
+no son pertinentes y por ende no serán implementados.
+
+Se plantea en la siguiente semana implementar el árbol binario como gráfica usando la librería 
+“mathplotlib”, y la terminación del proyecto, 
+
+
