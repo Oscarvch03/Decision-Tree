@@ -19,17 +19,19 @@ class Tree(object):
         self.rotulo = rotulo
         self.intervalo = intervalo
 
-
-##def insertar(nodo, valor):
-    # Divide en dos el nodo mas pequenho que clasifica valor
-    # Mira si nodo.izq != None:
-    # si si, revisar si valor esta en el intervalo de nodo.izq o nodo.der
-    # dependiendo de esto, correr insertar (nodo.izq, valor) o insertar(nodo.der, valor)
-    # Mirar si nodo.izq == None
-    # Si sÃ­:
-    # nodo.izq(None, None, nodo.rotulo + "1", [nodo.intervalo[0], ?????])
-    # nodo.der(None, None, nodo.rotulo + "2", [?????, nodo.intervalo[1]])
-    ##return nodo
+#def insertar(nodo, valor):
+#    if nodo.izq != None:
+#        if (valor > nodo.izq.intervalo[0]) and (valor < nodo.izq.intervalo[1]):
+#            return insertar(nodo.izq, valor)
+#
+#        else:
+#            return insertar(nodo.der, valor)
+#   else:
+#        if nodo.izq == None:
+#            nodo.izq(None, None, nodo.rotulo + "1", [nodo.intervalo[0], nodo.intervalo[0.5]])
+#        else:
+#            nodo.der(None, None, nodo.rotulo + "2", [nodo.intervalo[0.5], nodo.intervalo[1]])
+#    return nodo
 
 
 def crear_objetos(NoObjetos):
@@ -100,6 +102,8 @@ def Rondas_100(Ronda, Juego):
 
 
 ######################################################################################
+
+
 # Ejemplo de un arbolBinario
 # Nodos
 A222 = Tree(None, None, "A222",[0.875, 1])
@@ -132,6 +136,7 @@ A = Tree(A1, A2, "A", [0, 1])
 
 
 ######################################################################################
+
 # PARAMETROS DEL MODELO
 NoObjetos = 20
 TamContexto = 5
@@ -143,6 +148,9 @@ Ronda = 100
 
 Buscar = buscar(A, 0.3)
 print Buscar
+
+##Insertar = insertar(A, 0.3)
+##print Insertar
 
 Objetos = crear_objetos(NoObjetos)
 print Objetos
