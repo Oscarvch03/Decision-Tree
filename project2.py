@@ -19,19 +19,21 @@ class Tree(object):
         self.rotulo = rotulo
         self.intervalo = intervalo
 
-#def insertar(nodo, valor):
-#    if nodo.izq != None:
-#        if (valor > nodo.izq.intervalo[0]) and (valor < nodo.izq.intervalo[1]):
-#            return insertar(nodo.izq, valor)
-#
-#        else:
-#            return insertar(nodo.der, valor)
-#   else:
-#        if nodo.izq == None:
-#            nodo.izq(None, None, nodo.rotulo + "1", [nodo.intervalo[0], nodo.intervalo[0.5]])
-#        else:
-#            nodo.der(None, None, nodo.rotulo + "2", [nodo.intervalo[0.5], nodo.intervalo[1]])
-#    return nodo
+def insertar(nodo, valor):
+    if nodo.izq != None:
+        if (valor > nodo.izq.intervalo[0]) and (valor < nodo.izq.intervalo[1]):
+            
+            return insertar(nodo.izq, valor)
+            print "Esta a la izq"
+        elif (valor > nodo.izq.intervalo[0]) and (valor < nodo.izq.intervalo[1]):
+                return insertar(nodo.der, valor)
+                print "Esta a la der"
+            
+    else:
+        
+        nodo.izq = Tree(None, None, nodo.rotulo + "1", [nodo.intervalo[0], (nodo.intervalo[0] + nodo.intervalo[1]) /2])
+        nodo.der = Tree(None, None, nodo.rotulo + "2", [(nodo.intervalo[0] + nodo.intervalo [1])/2 , nodo.intervalo[1]])
+        return nodo
 
 
 def crear_objetos(NoObjetos):
