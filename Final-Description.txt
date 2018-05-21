@@ -1,0 +1,43 @@
+20/05/2018
+
+Descripción del Problema: Modelación de métodos de clasificación o discriminación de objetos con 
+el objetivo de reducir el espacio de búsqueda de un objeto y clasificar objetos diferentes.
+
+Solución Propuesta: Implementar un método de búsqueda de un árbol binario para optimizar la 
+clasificación de diferentes objetos dentro del mismo, se creó un método para que el árbol al 
+tener objetos diferentes los clasifique en diferentes categorías, pero en el caso donde se 
+encuentre más de un objeto en una de las categorías el árbol debe crear dos categorías nuevas 
+y después volver a clasificar los objetos teniendo en cuanta las categorías creadas. Esto llevo 
+a que el árbol a que sea capaz de aprender de cada vez que más de un objeto termina en una misma 
+categoría pues luego él logra crear tantas nuevas categorías como sean necesarias para que los objetos 
+tengan cada uno una clasificación única lo cual permite reducir el espacio de búsqueda de cada uno de 
+las mismas.
+
+Resumen: El programa comienza con la definición de la clase árbol la cual va a agregar ciertos argumentos 
+a una serie de objetos los cuales serán utilizados en el código, luego definimos nuestras funciones las 
+cuales vamos a utilizar a la hora de clasificar los objetos y de expandir el árbol. Comenzamos con la 
+función crear_objetos la cual en una lista vacía, crea e introduce cierto número de objetos los cuales 
+después van a ser utilizados en el programa. Luego está la función crear_contexto la cual toma objetos 
+al azar de la lista anteriormente mencionada para su respectiva clasificación. Luego está la función buscar 
+la cual revisa el objeto de la lista y lo compara con las categorias actuales del árbol, si el objeto cumple 
+estar en cierta categoría lo ubica en ella y sigue con el siguiente objeto hasta que ya clasifico a cada uno. 
+Después esta la función insertar la cual revisa si todos los objetos están en una categoría única, si más de 
+uno está en la misma categoría esta función también abre nos nuevas categorías para el árbol. Posteriormente 
+esta la función juego_discriminacion la cual se encarga de evaluar si cada uno de los objetos tiene un rotulo 
+único y retorna true si este es el caso, de lo contrario retorna false. A continuación esta la función Rondas 
+la cual se encarga de ejecutar juego_discriminacion determinadas veces para poder evaluar la eficiencia del 
+aprendizaje del árbol, esto lo hace mediante una serie de contadores los cuales son agregados a una lista 
+dependiendo si cada objeto tiene una única clasificación o no. Por ultimo esta la función imprimir_arbol la 
+cual imprime el árbol de cada ronda de juego_discriminacion en notacion [ [] [] ]. Después se definen los 
+parámetros del juego los cuales son los valores que el programa toma para ver que tantos objetos produce, 
+qué tantos toma de la lista que se encuentra en la función crear_objetos y las veces que tiene que ejecutarse 
+la función Rondas. Al final ya solo queda invocar las funciones principales además de imprimir el porcentaje de 
+victorias y derrotas además de mostrar unas graficas con respecto a los resultados obtenidos.   
+
+Se plantea a futuro implementar la gráfica de los árboles, basados en la información generada por el programa, 
+para que sea una ayuda visual para una mejor comprensión de la proyección del proyecto. Además se quiere 
+implementar como segunda parte, un sistema de comunicación entre varios individuos, los cuáles tengan incorporado 
+el sistema propuesto como proyecto, de forma que se genere una interacción entre los mismos, y basados en la 
+discriminación que generan empleando árboles binarios, cada uno aprenda del otro para que su función de clasificación 
+de objetos sea cada vez más eficaz, aunque hay que tener en cuenta que la implementación de ésta segunda parte es más 
+compleja, ya que abarca temas aún no vistos y que son densos de tratar.

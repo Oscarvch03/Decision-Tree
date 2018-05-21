@@ -97,7 +97,7 @@ def juego_discriminacion(nodo, Contexto):
         print "Si es real, Podria valer una fortuna"
         return True
 
-def Rondas_100(Ronda, Objetos):
+def Rondas(Ronda, Objetos):
 
     # Ejecuta la funcion juego_discriminacion determinadas veces para evaluar la eficiencia
     # de aprendizaje del arbol de discriminacion
@@ -155,7 +155,7 @@ Ronda = int(input('Por favor escriba el numero de rondas que desea que la maquin
 Objetos = crear_objetos(NoObjetos)
 print Objetos
 
-Arbol, vict , derr = Rondas_100(Ronda, Objetos)
+Arbol, vict , derr = Rondas(Ronda, Objetos)
 
 # Imprimir el porcentaje de veces que la maquina perdio o gano el juego
 
