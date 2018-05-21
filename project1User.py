@@ -42,21 +42,21 @@ def buscar(nodo, valor):
 
     # Revisa que rotulo se le asigna a un objeto
 
-    print "Buscando en categoria: " + str(nodo.rotulo) + " con el valor: " + str(valor)
+    # print "Buscando en categoria: " + str(nodo.rotulo) + " con el valor: " + str(valor)
     if nodo.izq != None:
         if (valor > nodo.izq.intervalo[0]) and (valor < nodo.izq.intervalo[1]):
-             print "Chinga la cosa a la izquierda"
+             # print "Chinga la cosa a la izquierda"
              return buscar(nodo.izq, valor)
         else:
-            print "Ay caramba"
+            # print "Ay caramba"
             if nodo.der != None:
                 if (valor > nodo.der.intervalo[0]) and (valor < nodo.der.intervalo[1]):
-                     print "Chinga la cosa a la derecha"
+                     # print "Chinga la cosa a la derecha"
                      return buscar(nodo.der, valor)
-                else:
-                     print "Ay caramba, estamos en la mala"
+                # else:
+                     # print "Ay caramba, estamos en la mala"
     else:
-        print "Lo que buscas es: " + str(nodo.rotulo)
+        # print "Lo que buscas es: " + str(nodo.rotulo)
         return nodo.rotulo
 
 def insertar(nodo, valor):
@@ -66,13 +66,13 @@ def insertar(nodo, valor):
 
     if nodo.izq != None:
         if (valor > nodo.izq.intervalo[0]) and (valor < nodo.izq.intervalo[1]):
-            print "Esta a la izq"
+            # print "Esta a la izq"
             return Tree(insertar(nodo.izq, valor), nodo.der, nodo.rotulo, nodo.intervalo)
         else:
-            print "Esta a la der"
+            # print "Esta a la der"
             return Tree(nodo.izq, insertar(nodo.der, valor), nodo.rotulo, nodo.intervalo)
     else:
-        print "En el nodo " + str(nodo.rotulo) + " insertamos dos nodos"
+        # print "En el nodo " + str(nodo.rotulo) + " insertamos dos nodos"
         nodo.izq = Tree(None, None, nodo.rotulo + "1", [nodo.intervalo[0], (nodo.intervalo[0] + nodo.intervalo[1]) /2])
         nodo.der = Tree(None, None, nodo.rotulo + "2", [(nodo.intervalo[0] + nodo.intervalo [1])/2 , nodo.intervalo[1]])
         return nodo
@@ -83,18 +83,18 @@ def juego_discriminacion(nodo, Contexto):
     # de contexto[0] es diferente del rotulo de los demas objetos del contexto. Devuelve
     # False en otro caso.
 
-    print "El contexto es: ", Contexto
+    # print "El contexto es: ", Contexto
     rotulos = []
     for o in Contexto:
         rotulos.append(buscar(nodo, o))
 
-    print "Los rotulos son: ", rotulos
+    # print "Los rotulos son: ", rotulos
     if rotulos[0] in rotulos[1:]:
-        print "No lo se Rick, parece falso"
+        # print "No lo se Rick, parece falso"
         return False
 
     else:
-        print "Si es real, Podria valer una fortuna"
+        # print "Si es real, Podria valer una fortuna"
         return True
 
 def Rondas(Ronda, Objetos):
@@ -116,13 +116,16 @@ def Rondas(Ronda, Objetos):
     A = Tree(None, None, "A", [0.,1.])
 
     for n in range(Ronda):
+        print "Corriendo ronda " + str(n)
         contexto = crear_contexto(Objetos, TamContexto)
-        print "Vamos a correr el juego con el arbol: ", imprimir_arbol(A)
+        # print "Vamos a correr el juego con el arbol: ", imprimir_arbol(A)
         if juego_discriminacion(A, contexto):
             Heroe += 1
+            print "Esta ronda se gano"
         else:
             A = insertar(A, contexto[0])
             Asistente += 1
+            print "Esta ronda se perdio"
         victorias.append(Heroe)
         derrotas.append(Asistente)
     return A, victorias, derrotas
@@ -153,32 +156,32 @@ Ronda = int(input('Por favor escriba el numero de rondas que desea que la maquin
 # Invocar las funciones principales
 
 Objetos = crear_objetos(NoObjetos)
-print Objetos
+# print Objetos
 
-Arbol, vict , derr = Rondas(Ronda, Objetos)
+Arb, vict , derr = Rondas(Ronda, Objetos)
 
 # Imprimir el porcentaje de veces que la maquina perdio o gano el juego
 
-print vict
+# print vict
 print "El porcentaje de victorias es: " + str(float(vict[-1])/Ronda*100) + "%"
-print derr
+# print derr
 print "El porcentaje de derrotas es: " + str(float(derr[-1])/Ronda*100) + "%"
 
 ######################################################################################
 
 # Graficas (Rondas ganadas vs Total Rondas) && (Rondas perdidas vs Total Rondas)
 
-a, b = plt.subplots()
-b.set_ylabel('Victorias Acumuladas')
-b.set_xlabel('Ronda')
-b.plot(vict)
+a, b = plt.subplots(2)
 
-plt.hold(True)
+b[0].set_ylabel('Victorias Acumuladas')
+b[1].set_ylabel('Derrotas Acumuladas')
+b[0].set_xlabel('Ronda')
+b[1].set_xlabel('Ronda')
+b[0].set_title("Victorias & Derrotas")
 
-c, d = plt.subplots()
-d.set_ylabel('Derrotas Acumuladas')
-d.set_xlabel('Ronda')
-d.plot(derr)
+
+b[0].plot(vict)
+b[1].plot(derr)
 
 plt.show()
 
